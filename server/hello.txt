@@ -1,0 +1,114 @@
+i am learning file system
+i am learning node js.
+node js is the part of backend
+
+
+
+import fs from 'fs'
+
+
+// creating  a flie
+
+try{
+    fs.writeFileSync("new.txt","i am learning node js")
+    console.log("file created succesfuly"); 
+}
+catch(e){
+    console.log(e,"file not created")
+}
+
+
+// reading a file
+
+
+
+try {
+    let fn = "hell.txt"
+    if(fn!="hello.txt") {
+        throw new Error("file not exist");
+    }
+    else {
+        const read = fs.readFileSync(fn, "utf-8")
+        console.log(read, "\nfile reading succesfully");
+
+    }
+
+}
+catch(e) {
+    console.error(e)
+
+}
+
+
+
+
+// append a file
+
+
+
+try {
+    const fn = "hello.txt"
+    if (fn != "hello.txt") {
+        console.log("file not exist");
+
+    }
+    else {
+        fs.appendFileSync(fn, "\nnode js is the part of backend")
+        console.log("append succesfuly");
+    }
+
+}
+catch (e) {
+    console.log(e, "append err");
+
+}
+
+
+
+
+
+
+
+
+// delete a file
+
+
+try{
+    fs.unlinkSync("new.txt")
+    console.log("file deleted succesfuly");
+    
+}
+catch(e){
+    console.log(e,"file not found");
+    
+}
+
+
+
+
+
+
+API
+
+import express from 'express'
+
+
+const app=express()
+const port = 4000
+
+
+app.get('/',(req,res)=>{
+    res.send("This is home page")
+})
+
+app.get('/about',(req,res)=>{
+    res.send("This is about page")
+})
+
+
+app.listen(port , ()=>{
+    console.log(`server is running on : ${port}`);
+    
+}
+)
+

@@ -1,0 +1,12 @@
+What is File System?
+    ==> It is inbuild module of node js which helps to intract with API.
+    a. creating File
+    b. reading File
+    c. append File
+    d. unlink File
+
+
+
+
+Newproject   kp7631744_db_user   jRjEFD5HZTMxdFS4
+mongodb+srv://<db_username>:jRjEFD5HZTMxdFS4@cluster0.0g7k5fb.mongodb.net/
